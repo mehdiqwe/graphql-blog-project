@@ -11,11 +11,11 @@ import './styles/fonts.css'
 
 const client = new ApolloClient({
   uri: import.meta.env.VITE_GRAPHCMS_URI,
-  cache: new InMemoryCache
+  cache: new InMemoryCache()
 })
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode>
+  <React.StrictMode>
     <ApolloProvider client={client}>
       <BrowserRouter>
         <ThemeProvider theme={theme}>
@@ -23,5 +23,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </ThemeProvider>
       </BrowserRouter>
     </ApolloProvider>
-  // </React.StrictMode>,
+  </React.StrictMode>,
 )
